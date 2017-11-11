@@ -1,0 +1,9 @@
+# tasks file for ubuntu-1604-swappiness
+---
+- name: configure vm.swappiness
+  sysctl:
+    name: vm.swappiness
+    value: "{{ ubuntu_1604_swappiness_swappiness }}"
+    reload: true
+    state: present
+  when: ubuntu_1604_swappiness_swappiness != false
