@@ -6,4 +6,3 @@
     value: "{{ ubuntu_1604_swappiness_swappiness }}"
     reload: true
     state: present
-  when: ubuntu_1604_swappiness_swappiness != false
